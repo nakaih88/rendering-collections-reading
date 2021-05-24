@@ -1,4 +1,4 @@
-  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+[1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
   [1m[35m (0.0ms)[0m  select sqlite_version(*)
   [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
@@ -9,21 +9,13 @@ Migrating to CreatePosts (20151230232412)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151230232412"]]
   [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
-
-
 Started GET "/posts/new" for ::1 at 2015-12-31 13:44:56 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 347ms (Views: 326.8ms | ActiveRecord: 0.2ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 13:44:57 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 13:44:57 -0600
-
-
 Started POST "/posts" for ::1 at 2015-12-31 13:45:03 -0600
 Processing by PostsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"mFCuNJP5reOW19phdr4zXRLzOMo4NZQ3wneiVR+RO/+owIoDiOxh24iHKkZ7DGazxbSIoRmvIOmJgA4gog1sGg==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf", "commit"=>"Submit Post"}
@@ -32,40 +24,23 @@ Processing by PostsController#create as HTML
   [1m[35m (1.2ms)[0m  commit transaction
 Redirected to http://localhost:3000/posts/1
 Completed 302 Found in 22ms (ActiveRecord: 1.7ms)
-
-
 Started GET "/posts/1" for ::1 at 2015-12-31 13:45:03 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"1"}
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
-
-
 Started GET "/posts/new" for ::1 at 2015-12-31 14:31:23 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 267ms (Views: 254.6ms | ActiveRecord: 0.2ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:31:24 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:31:24 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:31:24 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:31:24 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:31:24 -0600
-
-
 Started POST "/posts" for ::1 at 2015-12-31 14:31:32 -0600
-
 AbstractController::ActionNotFound (The action 'create' could not be found for PostsController):
   actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
   actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
@@ -121,8 +96,6 @@ AbstractController::ActionNotFound (The action 'create' could not be found for P
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
@@ -132,8 +105,6 @@ AbstractController::ActionNotFound (The action 'create' could not be found for P
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.6ms)
-
-
 Started POST "/posts" for ::1 at 2015-12-31 14:32:14 -0600
 Processing by PostsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTWzPdffQr7qFdpGJzsV8r90QblAUswaHa6CxK8YGqsppZcKzMqOhvRFKmEqiUAcaDPx0mHIeMRWWS6xEoRNTg==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf", "commit"=>"Submit Post"}
@@ -142,71 +113,40 @@ Processing by PostsController#create as HTML
   [1m[35m (1.2ms)[0m  commit transaction
 Redirected to http://localhost:3000/posts/2
 Completed 302 Found in 21ms (ActiveRecord: 2.0ms)
-
-
 Started GET "/posts/2" for ::1 at 2015-12-31 14:32:14 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"2"}
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 67ms (Views: 42.8ms | ActiveRecord: 0.2ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:32:15 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:32:15 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:32:15 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:32:15 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:32:15 -0600
-
-
 Started GET "/posts/2/edit" for ::1 at 2015-12-31 14:32:20 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"2"}
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/posts/2/edit" for ::1 at 2015-12-31 14:32:34 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"2"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:32:34 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:32:34 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:32:34 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:32:34 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:32:34 -0600
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:32:56 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"7QXcTW2CFDgYckZkZRkzAMx/i4+Hb85YMXsFcKj/3mPdlfh6dpfYAAYitkNoq2buGzg75Kb1eoZ6jKkFFWOJhg==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-
 RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"7QXcTW2CFDgYckZkZRkzAMx/i4+Hb85YMXsFcKj/3mPdlfh6dpfYAAYitkNoq2buGzg75Kb1eoZ6jKkFFWOJhg==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "controller"=>"posts", "action"=>"update", "id"=>"2"}):
   app/controllers/posts_controller.rb:27:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
@@ -219,17 +159,12 @@ RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"7QXcTW2CF
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (20.7ms)
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:35:35 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"7QXcTW2CFDgYckZkZRkzAMx/i4+Hb85YMXsFcKj/3mPdlfh6dpfYAAYitkNoq2buGzg75Kb1eoZ6jKkFFWOJhg==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-
 RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"7QXcTW2CFDgYckZkZRkzAMx/i4+Hb85YMXsFcKj/3mPdlfh6dpfYAAYitkNoq2buGzg75Kb1eoZ6jKkFFWOJhg==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "controller"=>"posts", "action"=>"update", "id"=>"2"}):
   app/controllers/posts_controller.rb:27:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
@@ -242,40 +177,23 @@ RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"7QXcTW2CF
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (31.4ms)
-
-
 Started GET "/posts/2/edit" for ::1 at 2015-12-31 14:35:37 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"2"}
   [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.4ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:35:37 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:35:37 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:35:38 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:35:38 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:35:38 -0600
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:35:41 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"BT7uoM0scLUKUuIX5X56bQAAfBSX8fgDogOPg3Vr0y41rsqX1jm8jRQCEjDozC+D10fMf7ZrTN3p9CP2yPeEyw==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
-
 RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"BT7uoM0scLUKUuIX5X56bQAAfBSX8fgDogOPg3Vr0y41rsqX1jm8jRQCEjDozC+D10fMf7ZrTN3p9CP2yPeEyw==", "title"=>"Rails Introduction zzz", "description"=>"asdfasdf", "commit"=>"Submit Post", "controller"=>"posts", "action"=>"update", "id"=>"2"}):
   app/controllers/posts_controller.rb:27:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
@@ -288,31 +206,17 @@ RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"BT7uoM0sc
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (20.9ms)
-
-
 Started GET "/posts/2/edit" for ::1 at 2015-12-31 14:36:06 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"2"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.4ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:36:06 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:36:06 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:36:06 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:36:06 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:36:06 -0600
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:36:10 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxmIFMQNrXWcCiTgkw/3fINB41MuVmKL2mIEQ5oNMaRviawj3xhhTYJa1MeevaKSVAZTOA/M1lWRlag2J5FmQQ==", "title"=>"Rails Introduction vvv", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
@@ -320,11 +224,8 @@ Processing by PostsController#update as HTML
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.0ms)[0m  rollback transaction
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
-
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
   app/controllers/posts_controller.rb:28:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
@@ -337,8 +238,6 @@ ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (55.6ms)
-
-
 Started GET "/posts/2/edit" for ::1 at 2015-12-31 14:36:27 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#edit as HTML
@@ -346,23 +245,11 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 220ms (Views: 191.4ms | ActiveRecord: 0.4ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:36:27 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:36:27 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:36:27 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:36:27 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:36:27 -0600
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:36:31 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8UnYfVKZAuOBRGc/H+iUVUWiYLMTnNmt8KIbSq6Q1CzVQNW7l+oM5BV4bvxzfe/glE56e3Ux7j8NSQYlyYUtQ==", "title"=>"Rails Introduction bbb", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
@@ -370,11 +257,8 @@ Processing by PostsController#update as HTML
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
-
 ActiveRecord::UnknownAttributeError (unknown attribute 'utf8' for Post.):
   app/controllers/posts_controller.rb:28:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
@@ -387,8 +271,6 @@ ActiveRecord::UnknownAttributeError (unknown attribute 'utf8' for Post.):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (61.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.8ms)
-
-
 Started PUT "/posts/2" for ::1 at 2015-12-31 14:38:13 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8UnYfVKZAuOBRGc/H+iUVUWiYLMTnNmt8KIbSq6Q1CzVQNW7l+oM5BV4bvxzfe/glE56e3Ux7j8NSQYlyYUtQ==", "title"=>"Rails Introduction bbb", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
@@ -398,38 +280,22 @@ Processing by PostsController#update as HTML
   [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://localhost:3000/posts/2
 Completed 302 Found in 13ms (ActiveRecord: 3.3ms)
-
-
 Started GET "/posts/2" for ::1 at 2015-12-31 14:38:13 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"2"}
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 14:38:13 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
-
-
 Started GET "/posts/new" for ::1 at 2015-12-31 15:14:52 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 443ms (Views: 419.7ms | ActiveRecord: 0.4ms)
-
-
 Started POST "/posts" for ::1 at 2015-12-31 15:14:59 -0600
 Processing by PostsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"DJnxV96xVebm1ZJyLbTKCr71kWuR+sYi74of6tKgZ5w8CdVgxaSZ3viFYlUgBp/kabIhALBgcvykfbOfbzwweQ==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdfa", "commit"=>"Submit Post"}
@@ -438,26 +304,19 @@ Processing by PostsController#create as HTML
   [1m[35m (1.4ms)[0m  commit transaction
 Redirected to http://localhost:3000/posts/3
 Completed 302 Found in 23ms (ActiveRecord: 1.9ms)
-
-
 Started GET "/posts/3" for ::1 at 2015-12-31 15:14:59 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 28ms (Views: 8.9ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/posts/3/edit" for ::1 at 2015-12-31 15:15:02 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"3"}
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
   Rendered posts/edit.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
-
-
 Started PUT "/posts/3" for ::1 at 2015-12-31 15:15:07 -0600
-
 ActionController::RoutingError (No route matches [PUT] "/posts/3"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
@@ -483,8 +342,6 @@ ActionController::RoutingError (No route matches [PUT] "/posts/3"):
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.2ms)
@@ -498,8 +355,6 @@ ActionController::RoutingError (No route matches [PUT] "/posts/3"):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (44.2ms)
-
-
 Started GET "/posts/3/edit" for ::1 at 2015-12-31 15:16:20 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#edit as HTML
@@ -507,25 +362,12 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
   Rendered posts/edit.html.erb within layouts/application (34.2ms)
 Completed 200 OK in 253ms (Views: 223.8ms | ActiveRecord: 0.4ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 15:16:20 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 15:16:20 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 15:16:20 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 15:16:20 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 15:16:20 -0600
-
-
 Started PATCH "/posts/3" for ::1 at 2015-12-31 15:16:24 -0600
-
 ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
@@ -551,8 +393,6 @@ ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
@@ -566,10 +406,7 @@ ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (40.7ms)
-
-
 Started PATCH "/posts/3" for ::1 at 2015-12-31 15:16:28 -0600
-
 ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
   web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
@@ -595,8 +432,6 @@ ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
   /Users/admin/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
@@ -610,8 +445,6 @@ ActionController::RoutingError (No route matches [PATCH] "/posts/3"):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (22.7ms)
-
-
 Started GET "/posts/3/edit" for ::1 at 2015-12-31 15:17:11 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#edit as HTML
@@ -619,23 +452,11 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (1.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
   Rendered posts/edit.html.erb within layouts/application (17.5ms)
 Completed 200 OK in 261ms (Views: 233.0ms | ActiveRecord: 1.8ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 15:17:11 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 15:17:11 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 15:17:11 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 15:17:11 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 15:17:11 -0600
-
-
 Started PATCH "/posts/3" for ::1 at 2015-12-31 15:17:16 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"McWoEN6KgB8FXwvxK/0BFFzk/eIvCVxE/8tsedrtnK4BVYwnxZ9MJxsP+9YmT1T6i6NNiQ6T6Jq0PMAMZ3HLSw==", "post"=>{"title"=>"Rails Introduction aaa", "description"=>"asdfasdfa"}, "commit"=>"Update Post", "id"=>"3"}
@@ -645,29 +466,21 @@ Processing by PostsController#update as HTML
   [1m[35m (1.1ms)[0m  commit transaction
 Redirected to http://localhost:3000/posts/3
 Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
-
-
 Started GET "/posts/3" for ::1 at 2015-12-31 15:17:16 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/posts" for ::1 at 2015-12-31 15:20:31 -0600
 Processing by PostsController#index as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (10.1ms)
 Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms)
-
-
 Started GET "/posts/new" for ::1 at 2015-12-31 15:20:34 -0600
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
-
-
 Started POST "/posts" for ::1 at 2015-12-31 15:20:38 -0600
 Processing by PostsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"kdcb39p3GS1J0PQ2JXMQoqMHKrYmmXs/0fuwwbaQpMyhRz/owWLVFVeABBEowUVMdECa3QcDz+GaDBy0CwzzKQ==", "title"=>"xxzxcz", "description"=>"asdfasd", "commit"=>"Submit Post"}
@@ -676,24 +489,18 @@ Processing by PostsController#create as HTML
   [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
 Redirected to http://localhost:3000/posts/4
 Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
-
-
 Started GET "/posts/4" for ::1 at 2015-12-31 15:20:38 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"4"}
   [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/posts/4/edit" for ::1 at 2015-12-31 15:20:42 -0600
 Processing by PostsController#edit as HTML
   Parameters: {"id"=>"4"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
   Rendered posts/edit.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
-
-
 Started PATCH "/posts/4" for ::1 at 2015-12-31 15:20:45 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbQUIUEEmCwMpNExPXz/Psbhf1vAdSLiR3ThvcvjJOQVJDAWWhFUFBL0IRYwzqrQEabPMOHvljwMg03Idn9zAQ==", "post"=>{"title"=>"xxzxczbbbb", "description"=>"asdfasd"}, "commit"=>"Update Post", "id"=>"4"}
@@ -701,11 +508,8 @@ Processing by PostsController#update as HTML
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.0ms)[0m  rollback transaction
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
-
 ActiveRecord::UnknownAttributeError (unknown attribute 'utf8' for Post.):
   app/controllers/posts_controller.rb:28:in `update'
-
-
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
@@ -718,8 +522,6 @@ ActiveRecord::UnknownAttributeError (unknown attribute 'utf8' for Post.):
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.6ms)
-
-
 Started PATCH "/posts/4" for ::1 at 2015-12-31 15:21:11 -0600
 Processing by PostsController#update as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbQUIUEEmCwMpNExPXz/Psbhf1vAdSLiR3ThvcvjJOQVJDAWWhFUFBL0IRYwzqrQEabPMOHvljwMg03Idn9zAQ==", "post"=>{"title"=>"xxzxczbbbb", "description"=>"asdfasd"}, "commit"=>"Update Post", "id"=>"4"}
@@ -729,31 +531,17 @@ Processing by PostsController#update as HTML
   [1m[35m (1.0ms)[0m  commit transaction
 Redirected to http://localhost:3000/posts/4
 Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
-
-
 Started GET "/posts/4" for ::1 at 2015-12-31 15:21:11 -0600
 Processing by PostsController#show as HTML
   Parameters: {"id"=>"4"}
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
-
-
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-31 15:21:11 -0600
-
-
 Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-31 15:21:11 -0600
-
-
 Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-31 15:21:11 -0600
-
-
 Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-31 15:21:11 -0600
-
-
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 15:21:11 -0600
-
-
 Started GET "/posts/4/edit" for ::1 at 2015-12-31 15:26:17 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PostsController#edit as HTML
@@ -773,3 +561,23 @@ Migrating to AddAuthorIdToPosts (20160119185429)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160119185429"]]
   [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-25 14:20:03.621091"], ["updated_at", "2019-04-25 14:20:03.621091"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "hometown", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "John Grisham"], ["hometown", "Charlottesville, VA"], ["created_at", "2019-04-25 14:20:39.454385"], ["updated_at", "2019-04-25 14:20:39.454385"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "authors" ("name", "hometown", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", " Renyolds Price"], ["hometown", "Macon, NC"], ["created_at", "2019-04-25 14:20:39.462772"], ["updated_at", "2019-04-25 14:20:39.462772"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Time To Kill"], ["description", "A Time to Kill is a 1989 legal suspense thriller by John Grisham. It was Grisham's first novel. The novel was rejected by many publishers before Wynwood Press (located in New York) eventually gave it a modest 5,000-copy printing. After The Firm, The Pelican Brief, and The Client became bestsellers, interest in A Time to Kill grew; the book was republished by Doubleday in hardcover and, later, by Dell Publishing in paperback, and itself became a bestseller. This made Grisham extremely popular among readers."], ["created_at", "2019-04-25 14:20:39.473782"], ["updated_at", "2019-04-25 14:20:39.473782"], ["author_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A Long and Happy Life"], ["description", "A Long and Happy Life presents Rosacoke Mustian to the reading public, as well as her erstwhile boyfriend, Wesley Beavers, who gets the innocent girl pregnant. Although he condescends to marry her, he then pretty much leaves her on her own. The book is alive with local color. In one of the early, most memorable scenes, Rosacoke needs to attend a funeral at a black church on a sizzling day in summer. Her friend Mildred Sutton has died in childbirth and is to be eulogized. Wesley Beavers drives his noisy motorcycle up to deliver Rosacoke to the funeral, but he does not go inside. Instead, he lingers outside and polishes his motorcycle, which is an extension of his being. Before the services are over, he leaves precipitously to get ready for the church picnic that he and Rosacoke are to attend that afternoon. As he screeches away from the church, he raises a trail of red dust behind him that one can almost taste, so vivid is Price’s description."], ["created_at", "2019-04-25 14:20:39.476193"], ["updated_at", "2019-04-25 14:20:39.476193"], ["author_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
